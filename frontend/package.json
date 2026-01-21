@@ -2,6 +2,7 @@
   "name": "tracking-frontend",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://hamza9355.github.io/HJB-TRACKING-APP",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
