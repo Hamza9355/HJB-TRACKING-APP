@@ -1,0 +1,202 @@
+/* Tracking Map Styles */
+
+.tracking-map-container {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  padding: 20px !important;
+}
+
+.map-info-window {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 200px;
+}
+
+.map-info-window h6 {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.map-info-window small {
+  display: block;
+  padding: 4px 0;
+  color: #333;
+}
+
+.map-info-window .btn {
+  margin-top: 8px;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+}
+
+/* Stats Card */
+.stats-card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+  overflow: hidden;
+  animation: slideUp 0.3s ease;
+}
+
+.stats-card .bg-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+}
+
+.stats-card .bg-gradient .card-title {
+  color: white;
+  font-weight: 600;
+}
+
+.stat-box {
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.stat-box:hover {
+  background: #667eea;
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+.stat-number {
+  font-weight: 700;
+  color: #667eea;
+  margin: 10px 0;
+  transition: color 0.3s ease;
+}
+
+.stat-box:hover .stat-number {
+  color: white;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.stat-box:hover .stat-label {
+  color: white;
+}
+
+/* Sessions List */
+.sessions-list {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.15);
+  overflow: hidden;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sessions-list .bg-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 15px;
+}
+
+.sessions-list .bg-gradient .card-title {
+  color: white;
+  font-weight: 600;
+}
+
+.sessions-scroll {
+  overflow-y: auto;
+  flex: 1;
+  max-height: 400px;
+}
+
+.sessions-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sessions-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.sessions-scroll::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 10px;
+}
+
+.sessions-scroll::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}
+
+.session-item {
+  padding: 12px 15px;
+  border-left: 4px solid;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.session-item:hover {
+  background: #f8f9fa;
+  padding-left: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.session-item.active {
+  background: linear-gradient(135deg, #667eea1a 0%, #764ba21a 100%);
+  font-weight: 600;
+}
+
+.session-item p {
+  margin: 0;
+  color: #333;
+}
+
+.session-item .badge {
+  font-size: 0.7rem;
+  padding: 4px 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tracking-map-container {
+    padding: 10px !important;
+  }
+
+  .stat-box {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .session-item {
+    padding: 8px 10px;
+  }
+
+  .sessions-list {
+    max-height: 300px;
+  }
+
+  .sessions-scroll {
+    max-height: 250px;
+  }
+}

@@ -1,0 +1,127 @@
+.sidebar {
+  background: white;
+  border-right: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  width: 250px;
+}
+
+.sidebar.closed {
+  width: 80px;
+}
+
+.sidebar-content {
+  padding: 1.5rem 0;
+}
+
+.nav-section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999;
+  margin-left: 0.5rem;
+}
+
+.nav-item {
+  color: #666 !important;
+  padding: 12px 1rem !important;
+  margin: 4px 0.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background: #f0f0f0;
+  color: #333 !important;
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, #0a1929 0%, #1a237e 100%);
+  color: white !important;
+  font-weight: 600;
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.nav-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.sidebar.closed .nav-text {
+  display: none;
+}
+
+.sidebar.closed .nav-item {
+  padding: 12px 0.5rem;
+  justify-content: center;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+}
+
+hr {
+  margin: 0.5rem 1rem;
+  border-color: #e0e0e0;
+}
+
+/* Scrollbar custom */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 60px;
+    height: calc(100vh - 60px);
+    z-index: 1000;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar.closed {
+    transform: translateX(-100%);
+    width: 250px;
+  }
+
+  .sidebar.open {
+    width: 250px;
+  }
+}
