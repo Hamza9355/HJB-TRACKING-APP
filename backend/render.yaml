@@ -1,0 +1,18 @@
+{
+  "buildCommand": "npm install",
+  "startCommand": "node server.js",
+  "envVars": [
+    {
+      "key": "MONGODB_URI",
+      "value": ""
+    },
+    {
+      "key": "FRONTEND_URL",
+      "value": ""
+    },
+    {
+      "key": "NODE_ENV",
+      "value": "production"
+    }
+  ]
+}
