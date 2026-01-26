@@ -15,6 +15,7 @@ import SessionDetail from './pages/Sessions/SessionDetail';
 import RealTime from './pages/RealTime/RealTime';
 import Reports from './pages/Reports/Reports';
 import TrackingMap from './pages/Maps/TrackingMap';
+import MapsIntegration from './pages/Maps/MapsIntegration';
 import ChatBot from './pages/ChatBot/ChatBot';
 
 // Composants Navigation
@@ -201,6 +202,23 @@ function App() {
                     <Navbar user={user} />
                     <main className="main-content">
                       <TrackingMap />
+                    </main>
+                  </div>
+                </div>
+              </PrivateRoute>
+            }
+          />
+
+          <Route
+            path="/maps-integration"
+            element={
+              <PrivateRoute>
+                <div className="d-flex">
+                  <Sidebar />
+                  <div className="flex-grow-1">
+                    <Navbar user={user} />
+                    <main className="main-content">
+                      <MapsIntegration />
                     </main>
                   </div>
                 </div>

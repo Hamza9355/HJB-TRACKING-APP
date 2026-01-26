@@ -4,6 +4,8 @@ import L from 'leaflet';
 import axios from 'axios';
 import toast from 'react-hot-toast';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import GoogleMapsFreeComponent from '../../components/Maps/GoogleMapsFree';
+import WazeNavigation from '../../components/Maps/WazeNavigation';
 import './TrackingMap.css';
 
 // Custom marker icons based on status
@@ -328,22 +330,27 @@ const TrackingMap = () => {
                           <p className="mb-2">
                             <small><strong>Date:</strong> {new Date(session.createdAt).toLocaleDateString()}</small>
                           </p>
-                          <div className="popup-buttons">
-                            <Button
-                              size="sm"
-                              variant="outline-primary"
-                              className="me-2"
-                              onClick={() => openInGoogleMaps(lat, lng)}
-                            >
-                              🗺️ Maps
-                            </Button>
-                            <Button
-                              size="sm"
-                              variant="outline-warning"
-                              onClick={() => openInWaze(lat, lng)}
-                            >
-                              🗺️ Waze
-                            </Button>
+                          <div className="popup-buttons mt-3">
+                            <div className="mb-2">
+                              <Button
+                                size="sm"
+                                style={{ backgroundColor: '#EA4335', border: 'none' }}
+                                className="me-2 text-white w-100 mb-2"
+                                onClick={() => openInGoogleMaps(lat, lng)}
+                              >
+                                🔴 Google Maps
+                              </Button>
+                            </div>
+                            <div>
+                              <Button
+                                size="sm"
+                                style={{ backgroundColor: '#6FCE5A', border: 'none' }}
+                                className="text-white w-100"
+                                onClick={() => openInWaze(lat, lng)}
+                              >
+                                🟢 Waze Navigation
+                              </Button>
+                            </div>
                           </div>
                         </div>
                       </Popup>
